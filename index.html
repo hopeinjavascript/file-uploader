@@ -5,8 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>File Uploader App</title>
+    <!-- while running locally -->
+    <!-- <link rel="stylesheet" type="text/css" href="public/styles.css" /> -->
+    <!-- while SSR-->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <h1>File Uploader App</h1>
+    <!-- <h1>File Uploader App</h1> -->
+    <section class="wrapper">
+      <form class="file-uploader-form">
+        <label for="file" class="file-uploader">
+          Drag and drop your files here
+          <input
+            type="file"
+            name="file"
+            class="file"
+            multiple
+            style="display: none"
+          />
+        </label>
+        <!-- <button class="btn-upload" disabled="true" type="submit">Upload</button> -->
+      </form>
+      <div class="file-upload-status">
+        <p class="upload-status completed">Completed - 3</p>
+        <p class="upload-status pending">Pending - 2</p>
+        <p class="upload-status cancelled">Cancelled - 1</p>
+        <p class="upload-status paused">Paused - 2</p>
+      </div>
+      <div class="file-progress-wrapper">
+        <div class="file-progress-container">
+          <div class="file-progress">
+            <div class="file-progress-outer-circle">
+              <div class="file-progress-inner-circle">
+                <div class="file-progress-percentage">56</div>
+              </div>
+            </div>
+          </div>
+          <p class="file-progress-name">
+            <span class="file-name">largeFile.txt</span>
+            <small class="file-size">154KB</small>
+          </p>
+          <div class="file-progress-cta">
+            <button class="cta-btn cancel">Cancel ❌</button>
+            <button class="cta-btn pause">Pause ⏸</button>
+            <button class="cta-btn resume">Resume ▶</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
+
+  <script></script>
 </html>
